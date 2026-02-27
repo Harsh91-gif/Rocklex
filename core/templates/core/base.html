@@ -1,0 +1,96 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>ROCKLEX Water</title>
+
+<!-- MAIN CSS -->
+<link rel="stylesheet" href="{% static 'core/css/main.css' %}">
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+    <div class="container nav-flex">
+
+        <!-- LOGO -->
+        <a href="{% url 'home_page' %}" class="logo">
+            <span class="company-name">ROCKLEX</span>
+        </a>
+
+        <!-- NAVIGATION -->
+        <nav class="nav-menu">
+            <a href="{% url 'home_page' %}">Home</a>
+            <a href="{% url 'about' %}">About</a>
+            <a href="{% url 'products' %}">Products</a>
+            <a href="{% url 'contact' %}">Contact</a>
+        </nav>
+
+        <!-- RIGHT SIDE ACTIONS -->
+        <div class="nav-actions">
+            <span class="header-phone">📞 +91 8585851717</span>
+            <a href="{% url 'contact' %}" class="btn-small">Order Now</a>
+        </div>
+
+    </div>
+</header>
+
+<!-- ================= PAGE CONTENT ================= -->
+<main>
+{% block content %}
+{% endblock %}
+</main>
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+    <div class="container footer-grid">
+
+        <!-- COMPANY INFO -->
+        <div class="footer-col">
+            <h3>ROCKLEX WATER</h3>
+            <p class="company">
+                Manufactured by Rahde Radhe Marketing.<br>
+                Delivering safe, hygienic and premium
+                packaged drinking water across India.
+            </p>
+            <span class="cert">ISO 9001:2015 Certified Company</span>
+        </div>
+
+        <!-- TRADE ENQUIRIES -->
+        <div class="footer-col">
+            <h3>Trade Enquiries</h3>
+            <p>Delhi & UP — +91 XXXXX XXXXX</p>
+            <p>North India — +91 XXXXX XXXXX</p>
+            <p>East & West — +91 XXXXX XXXXX</p>
+        </div>
+
+        <!-- QUICK LINKS -->
+        <div class="footer-col">
+            <h3>Quick Links</h3>
+            <a href="{% url 'home_page' %}">Home</a>
+            <a href="{% url 'products' %}">Products</a>
+            <a href="{% url 'contact' %}">Contact Us</a>
+            <a href="#">Privacy Policy</a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 ROCKLEX Water — Pure • Safe • Trusted
+    </div>
+</footer>
+<!-- Flipbook Library -->
+<script src="https://unpkg.com/page-flip/dist/js/page-flip.browser.js"></script>
+
+{% block extra_js %}
+{% endblock %}
+
+
+
+</body>
+</html>

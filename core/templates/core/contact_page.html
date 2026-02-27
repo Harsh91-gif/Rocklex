@@ -1,0 +1,171 @@
+{% extends "core/base.html" %}
+{% block content %}
+
+<!-- ================= CONTACT HERO ================= -->
+<section class="contact-hero">
+    <div class="container">
+        <h1>Contact ROCKLEX</h1>
+        <p>
+            We’d love to hear from you. Reach out for product enquiries,
+            dealership opportunities or customer support.
+        </p>
+    </div>
+</section>
+
+
+<!-- ================= QUICK CONTACT CARDS ================= -->
+<section class="section">
+<div class="container contact-cards">
+
+    <div class="contact-card">
+        <h3>📞 Call Us</h3>
+        <p>+91 8585851717</p>
+    </div>
+
+    <div class="contact-card">
+        <h3>📧 Email</h3>
+        <p>support@rocklexwater.com</p>
+    </div>
+
+    <div class="contact-card">
+        <h3>🤝 Trade Enquiry</h3>
+        <p>Distributor opportunities available across India</p>
+    </div>
+
+</div>
+</section>
+
+
+<!-- ================= CONTACT GRID ================= -->
+<section class="section">
+<div class="container contact-grid">
+
+    <!-- LEFT : COMPANY DETAILS -->
+    <div class="contact-info">
+
+        <h2>We’d love to hear from you</h2>
+
+        <p class="section-sub">
+            If you have any comments or questions,
+            reach out and we’ll happily answer.
+        </p>
+
+        <p>
+            ROCKLEX Water, operated by Rahde Radhe Marketing, is committed
+            to delivering safe, hygienic and premium quality packaged
+            drinking water. Manufactured under strict quality standards,
+            our goal is to provide reliable hydration solutions for homes,
+            offices and distribution partners across India while maintaining
+            purity, trust and consistent service excellence.
+        </p>
+
+        <h3>ROCKLEX WATER</h3>
+        <p>
+            Rahde Radhe Marketing<br>
+            An ISO 9001:2015 & HACCP Certified Company
+        </p>
+
+        <div class="contact-block">
+            <h4>Manufacturing Unit</h4>
+            <p>
+                HF Number 126, Village Fatehgarh,<br>
+                Rupnagar, Punjab – 140103
+            </p>
+
+            <p>
+                Survey No.224, NH-8,<br>
+                Nandigam, Bhilad, Gujarat – 396105
+            </p>
+        </div>
+
+        <div class="contact-block">
+            <h4>Customer Care</h4>
+            <p>+91 8585851717</p>
+            <p>Toll Free: 1800 123 2365</p>
+        </div>
+
+        <div class="contact-block">
+            <h4>Trade Enquiries</h4>
+            <p>Delhi & UP — +91 8054999101</p>
+            <p>North India — +91 8054999724</p>
+            <p>East & West — +91 9115558197</p>
+        </div>
+
+    </div>
+
+
+    <!-- RIGHT : CONTACT FORM -->
+    <div class="form-card">
+
+        {% if messages %}
+        <div class="success-box">
+            {% for message in messages %}
+                {{ message }}
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        <!-- ⭐ FORM WITH ID -->
+        <form method="POST" id="contactForm">
+        {% csrf_token %}
+
+        <input name="name" placeholder="Your Name" required autofocus>
+        <input name="phone" placeholder="Phone Number" required>
+        <input name="email" placeholder="Email">
+        <input name="city" placeholder="City">
+
+        <select name="inquiry_type">
+            <option value="home">Home Supply</option>
+            <option value="office">Office Supply</option>
+            <option value="distributor">Distributor</option>
+        </select>
+
+        <textarea name="message" placeholder="Your Message" required></textarea>
+
+        <button type="submit" class="btn">Send Inquiry</button>
+        </form>
+
+    </div>
+
+</div>
+</section>
+
+
+<!-- ================= GOOGLE MAP ================= -->
+<section class="section">
+<div class="container">
+    <h2>Our Location</h2>
+
+    <div class="map-box">
+        <iframe
+            src="https://www.google.com/maps?q=Delhi&output=embed"
+            width="100%"
+            height="350"
+            style="border:0;"
+            loading="lazy">
+        </iframe>
+    </div>
+</div>
+</section>
+
+
+<!-- ================= AUTO CLEAR FORM SCRIPT ================= -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    // check if success message exists
+    const successBox = document.querySelector(".success-box");
+
+    if(successBox){
+        const form = document.getElementById("contactForm");
+
+        if(form){
+            form.reset();          // clear fields
+            document.activeElement.blur(); // remove cursor focus
+        }
+    }
+
+});
+</script>
+
+{% endblock %}

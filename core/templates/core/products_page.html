@@ -1,0 +1,86 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block content %}
+
+<!-- ===============================
+        PRODUCTS SECTION
+================================ -->
+<section class="products-hero">
+    <div class="container">
+
+        <h2>Our Products</h2>
+        <p class="section-sub">
+            Solutions designed for every hydration need.
+        </p>
+
+        <div class="cards">
+
+            <!-- ===== PRODUCT 1 ===== -->
+            <div class="product-card">
+
+                <div class="product-image">
+                    <img src="{% static 'images/bottle1.png' %}" 
+                         alt="1 Liter Water Bottle">
+
+                    <span class="price-tag">₹20</span>
+                </div>
+
+                <div class="product-info">
+                    <h3>1 Liter Bottle</h3>
+                    <p>
+                        Convenient for travel, daily hydration,
+                        and on-the-go refreshment.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- ===== PRODUCT 2 ===== -->
+            <div class="product-card">
+
+                <div class="product-image">
+                    <img src="{% static 'images/jar20l.png' %}" 
+                         alt="20 Liter Water Jar">
+
+                    <span class="price-tag">₹80</span>
+                </div>
+
+                <div class="product-info">
+                    <h3>20 Liter Jar</h3>
+                    <p>
+                        Ideal for homes, offices, and water
+                        dispenser usage.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- ===== PRODUCT 3 ===== -->
+            <div class="product-card">
+
+                <div class="product-image">
+                    <img src="{% static 'images/bulk.png' %}" 
+                         alt="Bulk Water Supply">
+
+                    <span class="price-tag">Custom Pricing</span>
+                </div>
+
+                <div class="product-info">
+                    <h3>Bulk Supply</h3>
+                    <p>
+                        Distributor partnerships and commercial
+                        supply solutions available.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}
