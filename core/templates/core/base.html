@@ -47,42 +47,62 @@
 {% endblock %}
 </main>
 <!-- ================= FOOTER ================= -->
+<!-- ================= FOOTER ================= -->
 <footer class="footer">
-    <div class="container footer-grid">
 
-        <!-- COMPANY INFO -->
-        <div class="footer-col">
-            <h3>ROCKLEX WATER</h3>
-            <p class="company">
-                Manufactured by Rahde Radhe Marketing.<br>
-                Delivering safe, hygienic and premium
-                packaged drinking water across India.
-            </p>
-            <span class="cert">ISO 9001:2015 Certified Company</span>
-        </div>
+<div class="container footer-grid">
 
-        <!-- TRADE ENQUIRIES -->
-        <div class="footer-col">
-            <h3>Trade Enquiries</h3>
-            <p>Delhi & UP — +91 XXXXX XXXXX</p>
-            <p>North India — +91 XXXXX XXXXX</p>
-            <p>East & West — +91 XXXXX XXXXX</p>
-        </div>
-
-        <!-- QUICK LINKS -->
-        <div class="footer-col">
-            <h3>Quick Links</h3>
-            <a href="{% url 'home_page' %}">Home</a>
-            <a href="{% url 'products' %}">Products</a>
-            <a href="{% url 'contact' %}">Contact Us</a>
-            <a href="#">Privacy Policy</a>
-        </div>
-
+    <!-- BRAND DESCRIPTION -->
+    <div class="footer-col">
+        <h3>ROCKLEX WATER</h3>
+        <p>
+            Rocklex is a packaged drinking water brand focused on delivering
+            purity and freshness in every drop. Our goal is to provide safe,
+            hygienic and affordable drinking water through a growing
+            distribution network across India.
+        </p>
     </div>
 
-    <div class="footer-bottom">
-        © 2026 ROCKLEX Water — Pure • Safe • Trusted
+    <!-- LINKS -->
+    <div class="footer-col">
+        <h3>Links</h3>
+        <a href="{% url 'home_page' %}">Home</a>
+        <a href="#">About Us</a>
+       <a href="{% url 'home_page' %}#services-section">Services</a>
+        <a href="#">Our Distributor</a>
+        <a href="{% url 'contact' %}">Contact Us</a>
     </div>
+
+    <!-- OUR PRESENCE -->
+    <div class="footer-col">
+        <h3>Our Presence</h3>
+
+        <p><strong> Kanpur </strong></p>
+       
+    
+    </div>
+
+    <!-- CONTACT -->
+    <div class="footer-col">
+        <h3>Contact</h3>
+
+        <p><strong>Rocklex Water</strong></p>
+
+        <p>
+        Brand & Distribution Network<br>
+        Delhi NCR, India
+        </p>
+
+        <p>📞 +91 XXXXX XXXXX</p>
+        <p>✉ info@rocklex.com</p>
+    </div>
+
+</div>
+
+<div class="footer-bottom">
+© 2026 ROCKLEX Water — Pure • Safe • Trusted
+</div>
+
 </footer>
 <!-- Flipbook Library -->
 <script src="https://unpkg.com/page-flip/dist/js/page-flip.browser.js"></script>

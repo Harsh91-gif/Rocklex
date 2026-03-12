@@ -398,11 +398,10 @@ select:focus{
 
 .footer-grid{
   display:grid;
-  grid-template-columns:repeat(3,1fr);
+  grid-template-columns:repeat(4,1fr);
   gap:60px;
   padding:90px 0 70px;
 }
-
 .footer-col{
   display:flex;
   flex-direction:column;
@@ -421,16 +420,67 @@ select:focus{
   background:rgba(255,255,255,.03);
 }
 
+
+
+html{
+scroll-behavior:smooth;
+}
+
+/* =================================================
+   MOBILE
+================================================= */
 /* =================================================
    MOBILE
 ================================================= */
 @media(max-width:768px){
 
-  .nav-flex{flex-direction:column;}
+  /* KEEP NAVBAR IN ONE ROW */
+  .nav-flex{
+    flex-direction:row;
+    gap:10px;
+  }
 
-  .hero h1{font-size:32px;}
+  .logo{
+    flex-shrink:0;
+  }
 
-  .cards{grid-template-columns:1fr;}
+  .company-name{
+    font-size:20px;
+    letter-spacing:2px;
+  }
+
+  .nav-menu{
+    display:flex;
+    gap:10px;
+  }
+
+  .nav-menu a{
+    margin-left:0;
+    font-size:13px;
+  }
+
+  .nav-actions{
+    display:flex;
+    gap:8px;
+    align-items:center;
+  }
+
+  .header-phone{
+    font-size:12px;
+  }
+
+  .btn-small{
+    padding:6px 10px;
+    font-size:12px;
+  }
+
+  .hero h1{
+    font-size:32px;
+  }
+
+  .cards{
+    grid-template-columns:1fr;
+  }
 
   .footer-grid{
     grid-template-columns:1fr;
