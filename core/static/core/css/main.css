@@ -292,11 +292,13 @@ select:focus{
   background:#ffffff;
 }
 
+
 .book-layout{
   display:grid;
-  grid-template-columns:1fr 1fr;
+  grid-template-columns:1fr;
+  gap:30px;
   align-items:center;
-  gap:60px;
+ 
 }
 
 /* LEFT TEXT */
@@ -311,18 +313,25 @@ select:focus{
   margin-bottom:18px;
 }
 
+
 /* BOOK AREA */
 .book-wrapper{
   perspective:2000px;
   display:flex;
+  width:100%;
+  overflow:hidden;
   justify-content:center;
   position:relative;
 }
 
 /* SMALL BOOK SIZE */
+
+/* FIX BOOK OVERFLOW */
+
 #flipbook{
-  width:300px;
-  height:380px;
+  width:100px;
+  max-width:280px;
+  height:auto;
   margin:auto;
   border-radius:8px;
   overflow:hidden;
@@ -433,7 +442,10 @@ select:focus{
     linear-gradient(180deg,#0b0f19,#000);
 }
 
+
+
 .footer-grid{
+  align-items:start;
   display:grid;
   grid-template-columns:repeat(4,1fr);
   gap:60px;
