@@ -5,11 +5,16 @@
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Rocklex Water provides safe, pure and hygienic drinking water across India.">
+<meta name="keywords" content="water bottle, drinking water, Rocklex, packaged water, mineral water India">
+<meta name="author" content="Rocklex">
 
-<title>ROCKLEX Water</title>
+
+<title>Rocklex Water | Pure Drinking Water Supplier</title>
 
 <!-- MAIN CSS -->
 <link rel="stylesheet" href="{% static 'core/css/main.css' %}">
+<link rel="icon" type="image/png" href="{% static 'core/images/favicon.png' %}">
 
 </head>
 
@@ -20,9 +25,12 @@
     <div class="container nav-flex">
 
         <!-- LOGO -->
-        <a href="{% url 'home_page' %}" class="logo">
+        <!-- <a href="{% url 'home_page' %}" class="logo">
             <span class="company-name">ROCKLEX</span>
-        </a>
+        </a> -->
+        <a href="{% url 'home_page' %}" class="logo">
+    <img src="{% static 'core/images/logo.png' %}" alt="Rocklex Logo" class="logo-img">
+</a>
 
         <!-- NAVIGATION -->
         <nav class="nav-menu">
@@ -67,9 +75,11 @@
     <div class="footer-col">
         <h3>Links</h3>
         <a href="{% url 'home_page' %}">Home</a>
-        <a href="#">About Us</a>
+         <a href="{% url 'about' %}">About Us</a>
        <a href="{% url 'home_page' %}#services-section">Services</a>
-        <a href="#">Our Distributor</a>
+
+     
+<a href="{% url 'contact' %}">Become a Distributor</a>
         <a href="{% url 'contact' %}">Contact Us</a>
     </div>
 

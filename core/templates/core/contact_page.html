@@ -65,30 +65,14 @@
             An ISO 9001:2015 & HACCP Certified Company
         </p>
 
-        <!-- <div class="contact-block">
-            <h4>Manufacturing Unit</h4>
-            <p>
-                HF Number 126, Village Fatehgarh,<br>
-                Rupnagar, Punjab – 140103
-            </p>
-
-            <p>
-                Survey No.224, NH-8,<br>
-                Nandigam, Bhilad, Gujarat – 396105
-            </p>
-        </div> -->
-
         <div class="contact-block">
             <h4>Customer Care</h4>
             <p>+91 7905108766</p>
-            <!-- <p>Toll Free: 1800 123 2365</p> -->
         </div>
 
         <div class="contact-block">
             <h4>Trade Enquiries</h4>
             <p>Kanpur — +91 7905108766</p>
-            <!-- <p>North India — +91 8054999724</p>
-            <p>East & West — +91 9115558197</p> -->
         </div>
 
     </div>
@@ -96,33 +80,32 @@
 
     <!-- RIGHT : CONTACT FORM -->
     <div class="form-card">
+{% if messages %}
+<div class="success-box" style="background:#e6ffed; color:#155724; padding:12px; border-radius:6px; margin-bottom:15px;">
+    {% for message in messages %}
+        <strong>Success:</strong> {{ message }}
+    {% endfor %}
+</div>
+{% endif %}
 
-        {% if messages %}
-        <div class="success-box">
-            {% for message in messages %}
-                {{ message }}
-            {% endfor %}
-        </div>
-        {% endif %}
+        <!-- ✅ CORRECT FORM -->
+        <form method="POST" action="{% url 'contact' %}" id="contactForm">
+            {% csrf_token %}
 
-        <!-- ⭐ FORM WITH ID -->
-        <form method="POST" id="contactForm">
-        {% csrf_token %}
+            <input name="name" placeholder="Your Name" required autofocus>
+            <input name="phone" placeholder="Phone Number" required>
+            <input name="email" type="email" placeholder="Email">
+            <input name="city" placeholder="City">
 
-        <input name="name" placeholder="Your Name" required autofocus>
-        <input name="phone" placeholder="Phone Number" required>
-        <input name="email" placeholder="Email">
-        <input name="city" placeholder="City">
+            <select name="inquiry_type">
+                <option value="home">Home Supply</option>
+                <option value="office">Office Supply</option>
+                <option value="distributor">Distributor</option>
+            </select>
 
-        <select name="inquiry_type">
-            <option value="home">Home Supply</option>
-            <option value="office">Office Supply</option>
-            <option value="distributor">Distributor</option>
-        </select>
+            <textarea name="message" placeholder="Your Message" required></textarea>
 
-        <textarea name="message" placeholder="Your Message" required></textarea>
-
-        <button type="submit" class="btn">Send Inquiry</button>
+            <button type="submit" class="btn">Send Inquiry</button>
         </form>
 
     </div>
@@ -153,15 +136,14 @@
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
-    // check if success message exists
     const successBox = document.querySelector(".success-box");
 
     if(successBox){
         const form = document.getElementById("contactForm");
 
         if(form){
-            form.reset();          // clear fields
-            document.activeElement.blur(); // remove cursor focus
+            form.reset();
+            document.activeElement.blur();
         }
     }
 

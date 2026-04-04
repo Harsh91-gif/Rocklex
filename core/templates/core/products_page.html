@@ -3,79 +3,194 @@
 
 {% block content %}
 
-<!-- ===============================
-        PRODUCTS SECTION
-================================ -->
-<section class="products-hero">
+<!-- ================= HERO ================= -->
+<section class="hero">
     <div class="container">
 
-        <h2>Our Products</h2>
+        <h1>Pure Water. Perfected.</h1>
         <p class="section-sub">
-            Solutions designed for every hydration need.
+            Crafted through advanced purification to deliver safe, balanced, and refreshing hydration — every single day.
+        </p>
+
+    </div>
+</section>
+
+
+<!-- ================= FEATURED PRODUCT ================= -->
+<section class="section">
+    <div class="container">
+
+        <div class="product-card" style="display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:40px;gap:40px;">
+
+            <!-- IMAGE -->
+            <div class="product-image" style="background:none;">
+                <img src="{% static 'core/images/1_lit_bottle.png' %}" style="height:300px;">
+            </div>
+
+            <!-- INFO -->
+            <div class="product-info">
+                <h2>1L Premium Drinking Water</h2>
+
+                <p class="section-sub">
+                    Clean, crisp, and perfectly balanced — designed for everyday hydration on the go.
+                </p>
+
+                <ul class="product-features">
+                    <li>✔ Advanced RO + UV purification</li>
+                    <li>✔ Maintains essential minerals</li>
+                    <li>✔ Sealed for maximum hygiene</li>
+                </ul>
+
+                <div style="margin-top:20px;">
+                    <span style="font-size:28px;font-weight:600;">₹20</span>
+                </div>
+
+                <div style="margin-top:20px;">
+                    <a href="/contact" class="btn">Order Now</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ================= PRODUCT GRID ================= -->
+<section class="section" style="padding-top:0;">
+    <div class="container">
+
+        <h2>Our Range</h2>
+        <p class="section-sub">
+            Solutions for homes, offices, and businesses.
         </p>
 
         <div class="cards">
 
-            <!-- ===== PRODUCT 1 ===== -->
+            <!-- 20L -->
             <div class="product-card">
 
-                <div class="product-image">
-                    <img src="{% static 'images/bottle1.png' %}" 
-                         alt="1 Liter Water Bottle">
-
-                    <span class="price-tag">₹20</span>
+                <div class="product-image" style="position:relative;">
+                    <img src="{% static 'core/images/20_lit_jar.png' %}">
+                    <div class="price-tag">₹70</div>
                 </div>
 
-                <div class="product-info">
-                    <h3>1 Liter Bottle</h3>
+                <div class="product-info" style="padding:25px;">
+                    <h3>20L Family Jar</h3>
                     <p>
-                        Convenient for travel, daily hydration,
-                        and on-the-go refreshment.
+                        A dependable hydration solution for homes and workplaces — safe, economical, and always available.
                     </p>
+                    <a href="/contact" class="btn-small">Order</a>
                 </div>
 
             </div>
 
-
-            <!-- ===== PRODUCT 2 ===== -->
+            <!-- BULK -->
             <div class="product-card">
 
-                <div class="product-image">
-                    <img src="{% static 'images/jar20l.png' %}" 
-                         alt="20 Liter Water Jar">
-
-                    <span class="price-tag">₹80</span>
+                <div class="product-image" style="position:relative;">
+                    <img src="{% static 'core/images/bulk_supply_image.png' %}">
+                    <div class="price-tag">Custom</div>
                 </div>
 
-                <div class="product-info">
-                    <h3>20 Liter Jar</h3>
+                <div class="product-info" style="padding:25px;">
+                    <h3>Bulk Water Solutions</h3>
                     <p>
-                        Ideal for homes, offices, and water
-                        dispenser usage.
+                        Scalable supply designed for businesses, events, and distribution partners with consistent quality assurance.
                     </p>
+                    <a href="/contact" class="btn-small">Contact</a>
                 </div>
 
             </div>
 
+        </div>
 
-            <!-- ===== PRODUCT 3 ===== -->
-            <div class="product-card">
+    </div>
+</section>
 
-                <div class="product-image">
-                    <img src="{% static 'images/bulk.png' %}" 
-                         alt="Bulk Water Supply">
 
-                    <span class="price-tag">Custom Pricing</span>
-                </div>
+<!-- ================= PROCESS ================= -->
+<section class="section" style="background:#f8fbff;">
+    <div class="container">
 
-                <div class="product-info">
-                    <h3>Bulk Supply</h3>
-                    <p>
-                        Distributor partnerships and commercial
-                        supply solutions available.
-                    </p>
-                </div>
+        <h2>Precision Purification</h2>
+        <p class="section-sub">
+            Our multi-stage purification ensures every drop meets the highest standards of safety and taste.
+        </p>
 
+        <div class="cards">
+
+            <div class="card" style="padding:30px;">
+                💧 RO Filtration
+                <p class="section-sub">
+                    Removes dissolved impurities and harmful contaminants.
+                </p>
+            </div>
+
+            <div class="card" style="padding:30px;">
+                ☀ UV Sterilization
+                <p class="section-sub">
+                    Eliminates bacteria and viruses for safe consumption.
+                </p>
+            </div>
+
+            <div class="card" style="padding:30px;">
+                ⚗ Mineral Balance
+                <p class="section-sub">
+                    Restores essential minerals for a clean and natural taste.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ================= TRUST ================= -->
+<section class="section">
+    <div class="container">
+
+        <h2>Trusted. Delivered. Consistent.</h2>
+        <p class="section-sub">
+            Serving homes, offices, and businesses with uncompromised quality and reliability.
+        </p>
+
+        <div class="cards">
+
+            <div class="card" style="padding:30px;">
+                ⭐ 500+ Satisfied Customers
+            </div>
+
+            <div class="card" style="padding:30px;">
+                🚚 Fast & Reliable Delivery
+            </div>
+
+            <div class="card" style="padding:30px;">
+                🏢 Preferred by Businesses
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ================= CTA ================= -->
+<section class="section" style="padding-top:40px;">
+    <div class="container">
+
+        <div class="card" style="padding:50px;background:linear-gradient(135deg,#0ea5e9,#0284c7);color:white;">
+            
+            <h2>Experience Better Hydration</h2>
+            <p style="opacity:.9;">
+                Choose purity you can trust. Delivered fresh, every time.
+            </p>
+
+            <div style="margin-top:20px;">
+                <a href="/contact" class="btn" style="background:white;color:#0284c7;">
+                    Order Now
+                </a>
             </div>
 
         </div>
