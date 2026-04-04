@@ -1,18 +1,21 @@
 {% load static %}
+
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <meta name="description" content="Rocklex Water provides safe, pure and hygienic drinking water across India.">
 <meta name="keywords" content="water bottle, drinking water, Rocklex, packaged water, mineral water India">
 <meta name="author" content="Rocklex">
 
-
 <title>Rocklex Water | Pure Drinking Water Supplier</title>
 
 <!-- MAIN CSS -->
+
 <link rel="stylesheet" href="{% static 'core/css/main.css' %}">
 <link rel="icon" type="image/png" href="{% static 'core/images/favicon.png' %}">
 
@@ -21,91 +24,83 @@
 <body>
 
 <!-- ================= NAVBAR ================= -->
+
 <header class="navbar">
     <div class="container nav-flex">
 
-        <!-- LOGO -->
-        <!-- <a href="{% url 'home_page' %}" class="logo">
-            <span class="company-name">ROCKLEX</span>
-        </a> -->
-        <a href="{% url 'home_page' %}" class="logo">
-    <img src="{% static 'core/images/logo.png' %}" alt="Rocklex Logo" class="logo-img">
-</a>
+```
+    <!-- LOGO -->
+    <a href="{% url 'home_page' %}" class="logo">
+        <img src="{% static 'core/images/logo.png' %}" alt="Rocklex Logo" class="logo-img">
+    </a>
 
-        <!-- NAVIGATION -->
-        <nav class="nav-menu">
-            <a href="{% url 'home_page' %}">Home</a>
-            <a href="{% url 'about' %}">About</a>
-            <a href="{% url 'products' %}">Products</a>
-            <a href="{% url 'contact' %}">Contact</a>
-        </nav>
+    <!-- MENU -->
+    <nav class="nav-menu">
+        <a href="{% url 'home_page' %}">Home</a>
+        <a href="{% url 'about' %}">About</a>
+        <a href="{% url 'products' %}">Products</a>
+        <a href="{% url 'contact' %}">Contact</a>
+    </nav>
 
-        <!-- RIGHT SIDE ACTIONS -->
-        <div class="nav-actions">
-            <span class="header-phone">📞 +91 8585851717</span>
-            <a href="{% url 'contact' %}" class="btn-small">Order Now</a>
-        </div>
-
+    <!-- ORDER BUTTON (ONLY CTA) -->
+    <div class="nav-actions">
+        <a href="{% url 'contact' %}" class="btn-small">Order Now</a>
     </div>
+
+</div>
+```
+
 </header>
 
 <!-- ================= PAGE CONTENT ================= -->
+
 <main>
 {% block content %}
 {% endblock %}
 </main>
+
 <!-- ================= FOOTER ================= -->
-<!-- ================= FOOTER ================= -->
+
 <footer class="footer">
 
 <div class="container footer-grid">
 
-    <!-- BRAND DESCRIPTION -->
-    <div class="footer-col">
-        <h3>ROCKLEX WATER</h3>
-        <p>
-            Rocklex is a packaged drinking water brand focused on delivering
-            purity and freshness in every drop. Our goal is to provide safe,
-            hygienic and affordable drinking water through a growing
-            distribution network across India.
-        </p>
-    </div>
+```
+<!-- BRAND -->
+<div class="footer-col">
+    <h3>ROCKLEX WATER</h3>
+    <p>
+        Rocklex is a packaged drinking water brand focused on delivering
+        purity and freshness in every drop. Safe, hygienic and affordable
+        drinking water across India.
+    </p>
+</div>
 
-    <!-- LINKS -->
-    <div class="footer-col">
-        <h3>Links</h3>
-        <a href="{% url 'home_page' %}">Home</a>
-         <a href="{% url 'about' %}">About Us</a>
-       <a href="{% url 'home_page' %}#services-section">Services</a>
+<!-- LINKS -->
+<div class="footer-col">
+    <h3>Links</h3>
+    <a href="{% url 'home_page' %}">Home</a>
+    <a href="{% url 'about' %}">About Us</a>
+    <a href="{% url 'home_page' %}#services-section">Services</a>
+    <a href="{% url 'contact' %}">Become a Distributor</a>
+    <a href="{% url 'contact' %}">Contact Us</a>
+</div>
 
-     
-<a href="{% url 'contact' %}">Become a Distributor</a>
-        <a href="{% url 'contact' %}">Contact Us</a>
-    </div>
+<!-- PRESENCE -->
+<div class="footer-col">
+    <h3>Our Presence</h3>
+    <p><strong>Kanpur</strong></p>
+</div>
 
-    <!-- OUR PRESENCE -->
-    <div class="footer-col">
-        <h3>Our Presence</h3>
-
-        <p><strong> Kanpur </strong></p>
-       
-    
-    </div>
-
-    <!-- CONTACT -->
-    <div class="footer-col">
-        <h3>Contact</h3>
-
-        <p><strong>Rocklex Water</strong></p>
-
-        <p>
-        Brand & Distribution Network<br>
-        Delhi NCR, India
-        </p>
-
-        <p>📞 +91 XXXXX XXXXX</p>
-        <p>✉ info@rocklex.com</p>
-    </div>
+<!-- CONTACT -->
+<div class="footer-col">
+    <h3>Contact</h3>
+    <p><strong>Rocklex Water</strong></p>
+    <p>Delhi NCR, India</p>
+    <p>📞 +91 8585851717</p>
+    <p>✉ info@rocklex.com</p>
+</div>
+```
 
 </div>
 
@@ -114,13 +109,13 @@
 </div>
 
 </footer>
-<!-- Flipbook Library -->
+
+<!-- JS -->
+
 <script src="https://unpkg.com/page-flip/dist/js/page-flip.browser.js"></script>
 
 {% block extra_js %}
 {% endblock %}
-
-
 
 </body>
 </html>

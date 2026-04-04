@@ -463,65 +463,72 @@ html{
 scroll-behavior:smooth;
 }
 
+
 /* =================================================
    MOBILE
 ================================================= */
-/* =================================================
-   MOBILE
-================================================= */
+
+
 @media(max-width:768px){
 
-  /* KEEP NAVBAR IN ONE ROW */
-  .nav-flex{
-    flex-direction:row;
-    gap:10px;
-  }
+/* NAVBAR FIX */
+.nav-flex{
+flex-direction:row;
+justify-content:space-between;
+align-items:center;
+gap:8px;
+flex-wrap:nowrap;
+}
 
-  .logo{
-    flex-shrink:0;
-  }
+/* LOGO */
+.logo{
+flex-shrink:0;
+}
 
-  .company-name{
-    font-size:20px;
-    letter-spacing:2px;
-  }
+.logo-img{
+height:50px;
+}
 
-  .nav-menu{
-    display:flex;
-    gap:10px;
-  }
+/* MENU */
+.nav-menu{
+display:flex;
+gap:8px;
+align-items:center;
+flex-shrink:1;
+}
 
-  .nav-menu a{
-    margin-left:0;
-    font-size:13px;
-  }
+.nav-menu a{
+margin-left:0;
+font-size:12px;
+white-space:nowrap;
+}
 
-  .nav-actions{
-    display:flex;
-    gap:8px;
-    align-items:center;
-  }
+/* ORDER BUTTON */
+.nav-actions{
+display:flex;
+align-items:center;
+}
 
-  .header-phone{
-    font-size:12px;
-  }
+.btn-small{
+padding:6px 10px;
+font-size:12px;
+white-space:nowrap;
+}
 
-  .btn-small{
-    padding:6px 10px;
-    font-size:12px;
-  }
+/* HERO */
+.hero h1{
+font-size:32px;
+}
 
-  .hero h1{
-    font-size:32px;
-  }
+/* GRID */
+.cards{
+grid-template-columns:1fr;
+}
 
-  .cards{
-    grid-template-columns:1fr;
-  }
-
-  .footer-grid{
-    grid-template-columns:1fr;
-    text-align:center;
-    gap:35px;
-  }
+/* FOOTER */
+.footer-grid{
+grid-template-columns:1fr;
+text-align:center;
+gap:35px;
+}
 }
