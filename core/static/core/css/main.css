@@ -1,6 +1,9 @@
 /* =================================================
    ROCKLEX DESIGN SYSTEM
 ================================================= */
+main{
+padding-top:80px; /* same as navbar height */
+}
 
 /* ================= ROOT COLORS ================= */
 :root{
@@ -323,13 +326,15 @@ select:focus{
 
 
 #flipbook{
-  width:300px;
-  height:380px;
-  margin:auto;
-  border-radius:8px;
-  overflow:hidden;
-  box-shadow:0 40px 80px rgba(0,0,0,.25);
+width:100%;
+max-width:300px;
+height:auto;
+margin:auto;
+border-radius:8px;
+overflow:hidden;
+box-shadow:0 40px 80px rgba(0,0,0,.25);
 }
+
 
 /* pageflip internal fix */
 .stf__parent{
@@ -472,6 +477,17 @@ scroll-behavior:smooth;
 
 
 @media(max-width:768px){
+
+  /* FIX BOOK SECTION */
+.book-layout{
+grid-template-columns:1fr;
+gap:30px;
+}
+
+.book-wrapper{
+width:100%;
+overflow:hidden;
+}
 
 /* NAVBAR FIX */
 .nav-flex{
